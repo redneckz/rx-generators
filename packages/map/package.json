@@ -1,0 +1,36 @@
+{
+  "name": "@redneckz/map",
+  "version": "0.0.0",
+  "author": "Alexander Alexandrov",
+  "description": "The Map operator applies function of your choosing to each item emitted by Iterable, and returns Iterable that emits the results of these function applications.",
+  "keywords": [
+    "reactive",
+    "generator",
+    "FRP",
+    "map"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/redneckz/rx-generators"
+  },
+  "bugs": {
+    "url": "https://github.com/redneckz/rx-generators/issues"
+  },
+  "homepage": "https://github.com/redneckz/rx-generators#readme",
+  "main": "lib/map.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "clean": "rimraf coverage",
+    "pretest": "npm run eslint",
+    "test": "npm run jest && npm run coveralls",
+    "eslint": "eslint \"lib/**/*.js?(x)\" --cache --cache-location \"./.cache\"",
+    "jest": "cross-env NODE_ENV=test jest",
+    "coveralls": "coveralls < coverage/lcov.info"
+  },
+  "dependencies": {
+    "@redneckz/gop": "0.0.0"
+  }
+}

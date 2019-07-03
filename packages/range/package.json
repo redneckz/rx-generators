@@ -1,0 +1,33 @@
+{
+  "name": "@redneckz/range",
+  "version": "0.0.0",
+  "author": "Alexander Alexandrov",
+  "description": "Creates an generator that emits a sequence of numbers within a specified range",
+  "keywords": [
+    "reactive",
+    "generator",
+    "FRP",
+    "range"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/redneckz/rx-generators"
+  },
+  "bugs": {
+    "url": "https://github.com/redneckz/rx-generators/issues"
+  },
+  "homepage": "https://github.com/redneckz/rx-generators#readme",
+  "main": "lib/range.js",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "clean": "rimraf coverage",
+    "pretest": "npm run eslint",
+    "test": "npm run jest && npm run coveralls",
+    "eslint": "eslint \"lib/**/*.js?(x)\" --cache --cache-location \"./.cache\"",
+    "jest": "cross-env NODE_ENV=test jest",
+    "coveralls": "coveralls < coverage/lcov.info"
+  }
+}
