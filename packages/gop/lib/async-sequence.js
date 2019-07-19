@@ -5,9 +5,8 @@ function asyncSequence(step) {
     let i = 0;
     for await (const inputValue of iterable) {
       const instruction = step(inputValue, i, iterable);
-      const { done, skip } = instruction;
-      if (done) break;
-      if (!skip) {
+      if (instruction.done) break;
+      if (!instruction.skip) {
         if ('values' in instruction) yield* instruction.values;
         if ('value' in instruction) yield instruction.value;
       }

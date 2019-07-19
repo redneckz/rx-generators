@@ -1,6 +1,7 @@
 module.exports = {
   extends: [require.resolve('@redneckz/react-lib-config/.eslintrc.js')],
   rules: {
+    'no-await-in-loop': 'off',
     'no-restricted-syntax': [
       'error',
       {
